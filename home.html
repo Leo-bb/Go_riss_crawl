@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go Scrape</title>
+    <title>London's</title>
+    <link rel="stylesheet" href="homeStyle.css">
 </head>
 <body>
-    <h1>GO scrape</h1>
-    <h3>Riss Paper Scrape</h3>
-    <form method = "POST" action = "/scrape">
-        <input placeholder="What paper" name = "keyword" />
-        <button>Search</button>
+    <h1><span>L</span><span>O</span><span>N</span><span>D</span><span>O</span><span>N</span></h1>
+    <h2>Riss Paper Scrape</h2>
 
-    </form> 
+    <form method = "POST" action = "/scrape">
+        <div class = "search">
+           <input placeholder="검색하려는 논문의 키워드를 입력해주세요." id="search_bar" name="keyword" style="
+                 padding-left: 120px;
+                padding-right: 120px;
+                margin-left: 220px;
+                width: 255px;
+            ">
         
+            <button>Seach</button>
+        </div>
+    </form> 
 </body>
 </html>
