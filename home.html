@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>London's</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="homeStyle.css">
 </head>
 <body>
@@ -11,15 +12,8 @@
     <h2>Riss Paper Scrape</h2>
 
     <form method = "POST" action = "/scrape">
-        <div class = "search">
-           <input placeholder="검색하려는 논문의 키워드를 입력해주세요." id="search_bar" name="keyword" style="
-                 padding-left: 120px;
-                padding-right: 120px;
-                margin-left: 220px;
-                width: 255px;
-            ">
-        
-            <button>Seach</button>
+        <div class="mx-auto mt-5 search_bar input-group mb-3">
+            <input type="text" class="rounded-pill  form-control" placeholder="검색하려는 논문의 키워드나 제목을 입력해주세요." name = "keyword" aria-label="Recipient's username" aria-describedby="button-addon2">
         </div>
     </form> 
 </body>
