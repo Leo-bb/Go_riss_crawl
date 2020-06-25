@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"runtime"
 	"strconv"
 	"strings"
 
@@ -26,6 +27,8 @@ type extractedPaper struct {
 func Scrape(keyword string, page int) {
 	var papers []extractedPaper
 	c := make(chan []extractedPaper)
+
+	runtime.GOMAXPROCS(runtime.NumCPU())
 
 	for i := 0; i < page; i++ {
 		URL := getBaseURL(keyword, page)

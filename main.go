@@ -1,7 +1,7 @@
 package main
 
 import (
-	"Leo-bb/Go_riss_crawl/scrape"
+	"Go_riss_crawl/scrape"
 	"os"
 	"strings"
 
@@ -25,7 +25,7 @@ func handleScrape(c echo.Context) error {
 	defer os.Remove(fileNAME)
 	keyword := strings.ToLower(scrape.CleanString(c.FormValue("keyword")))
 	// page, _ := strconv.Atoi(c.FormValue("page"))
-	page := 2
+	page := 1
 	scrape.Scrape(keyword, page)
 	return c.Attachment(fileNAME, fileNAME)
 }
